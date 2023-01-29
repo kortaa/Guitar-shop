@@ -1,0 +1,22 @@
+
+
+<body>
+<main>
+    <div id="featured-guitars">
+<!--        <div class="products-header">-->
+<!--            <h2>Featured Guitars</h2>-->
+<!--        </div>-->
+        <div class="products">
+        {{# each products}}
+            <div class="guitar-item">
+                <img src="{{this.imagePath}}">
+                <h3>{{this.title}}</h3>
+                <p>${{this.price}}</p>
+                <a href="/add-to-cart/{{this._id}}">Add to Cart</a>
+            </div>
+           {{/each}}
+        </div>
+    </div>
+
+</main>
+

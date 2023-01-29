@@ -1,0 +1,51 @@
+{{# if products}}
+    <main>
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                {{#each products}}
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="{{this.item.imagePath}}">
+                                <div>
+                                    <p>{{this.item.title}}</p>
+                                    <small>Price: ${{this.item.price}}</small>
+                                    <br>
+                                    <a href="/remove/{{this.item._id}}">Remove</a>
+                                </div>
+                            </div>
+                        <td>
+                        <a class="minus" href="/reduce/{{this.item._id}}">-</a>
+                        {{this.qty}}
+                        <a href="/add-shopping-cart/{{this.item._id}}">+</a>
+                        </td>
+                        <td>${{this.price}}</td>
+                    </tr>
+                {{/each}}
+            </table>
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>Total</td>
+                        <td>${{totalPrice}}</td>
+                    </tr>
+                    <tr>
+                        <td><a class="checkout" href="/">Checkout</a> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+{{else}}
+    <div class="empty-cart">
+        <h1> Your cart is empty :(</h1>
+    </div>
+
+{{/if}}
+
+
