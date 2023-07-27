@@ -1,2 +1,2 @@
 # Guitar-shop
-Website written in node.js + Express. Data is stored in MongoDB data base. User can look for products, create account, log in, add products to cart, submit order.
+Our website is a Node.js + Express-based online shopping platform with a MongoDB database. Users can search for products, create accounts, log in, add products to their cart, and submit orders. Enjoy a secure and efficient shopping experience!
